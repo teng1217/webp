@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<h1>The addEventListener() Method (B0944238)</h1>
+
+<p>type words!!!</p>
+
+<p id="log"></p>
+
+<script>
+document.addEventListener('keydown', logKey);
+
+document.getElementById('log');
+
+function logKey(e) {
+  log.textContent += `${e.key}`;
+}
+</script>
+
+</body>
+</html>
