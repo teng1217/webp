@@ -1,0 +1,56 @@
+<html>
+<body>
+
+<h1>HW3 (B0944238)</h1>
+
+<p>Words contest, Please type words faster</p>
+<p id = "log"></p>
+
+<script>
+
+function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+var all = document.getElementById("log").innerHTML;
+var lastword = (all.charAt(all.length - 1));
+
+document.getElementById("log").innerHTML = makeid(5);
+
+function print() {
+    if (log.textContent.length === 0) {
+    	window.alert("YOU WIN!!!");
+        return;
+    }
+	else {
+    document.getElementById("log").innerHTML = makeid(1) + document.getElementById("log").innerHTML;
+    all = document.getElementById("log").innerHTML;    
+	setTimeout(print, 2500);
+	}
+    
+}
+	print();
+
+
+lastword = (all.charAt(all.length - 1));
+
+document.addEventListener('keydown', logKey);
+document.getElementById('log');
+
+function logKey(e) {
+	if (lastword == `${e.key}`) {
+  		log.textContent = all.substring(0, all.length - 1);
+		all = log.textContent;
+        lastword = (all.charAt(all.length - 1));
+	}
+}
+
+</script>
+
+</body>
+</html>
