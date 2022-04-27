@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+    <script>
+    var msg = {
+    "count": 170,
+    "data": [
+    {
+      "stationNo": "C0AD1",
+      "stationName": "八里",
+      "recTime": "202204271600",
+      "rain": 0.0
+    },
+    {
+      "stationNo": "C0AD0",
+      "stationName": "三芝",
+      "recTime": "202204271600",
+      "rain": 0.0
+    },
+    {
+      "stationNo": "C0AD4",
+      "stationName": "土城",
+      "recTime": "202204271600",
+      "rain": 0.0
+    },
+    {
+      "stationNo": "318",
+      "stationName": "大安福州山",
+      "recTime": "202204271602",
+      "rain": 0.0
+    },
+    {
+      "stationNo": "01A17",
+      "stationName": "坪林",
+      "recTime": "201911130140",
+      "rain": 0.0
+    }] };
+
+    // var data = $.getJSON("https://wic.heo.taipei/OpenData/API/Rain/Get?stationNo=&loginId=open_rain&dataKey=85452C1D");
+        
+
+        $(document).ready(function(){            
+                $("contain").append("<h2>" + "<h2>");
+        });
+
+    </script>
+</head>
+<body>
+    <h1>臺北市即時雨量量資料</h1> 
+    <div id="contain"></div> 
+    <h3 id = "time" ></h3> 
+    <h3 id = vol></h3>
+</body>
+</html>
