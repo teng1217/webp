@@ -1,0 +1,56 @@
+<html> 
+<head> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script> 
+    //var dataUrl = "https://cors-anywhere.herokuapp.com/https://wic.heo.taipei/OpenData/API/Rain/Get?stationNo=&loginId=open_rain&dataKey=85452C1D";
+    var data= [
+    {
+        stationNo: "C0AD1",
+        stationName: "八里",
+        recTime: "202204271600",
+        rain: 0
+    },
+    {
+        stationNo: "C0AD0",
+        stationName: "三芝",
+        recTime: "202204271600",
+        rain: 0
+    },
+    {
+        stationNo: "C0AD4",
+        stationName: "土城",
+        recTime: "202204271600",
+        rain: 0
+    },
+    {
+        stationNo: "318",
+        stationName: "大安福州山",
+        recTime: "202204271602",
+        rain: 0
+    },
+    {
+        stationNo: "01A17",
+        stationName: "坪林",
+        recTime: "201911130140",
+        rain: 0
+    },
+    {
+        stationNo: "C0AD3",
+        stationName: "蘆洲",
+        recTime: "202204271600",
+        rain: 0
+    },]
+    $(document).ready(function(){
+            for(var i=0;i<6;i++){
+            $(".rain").append("地點:" + data[i].stationName + "("+data[i].stationNo+")" + "</br>");
+            $(".rain").append("時間:" + data[i].recTime.substring(0,4) + "年" + data[i].recTime.substring(5,6)+"月" + data[i].recTime.substring(7,8)+"號" + data[i].recTime.substring(9,10)+"時" + data[i].recTime.substring(11,12) + "分")
+            $(".rain").append("<br>即時雨量:"+data[i].rain + "<br><br>");
+            }
+    })
+  </script> 
+</head> 
+<body> 
+  <h1>臺北市即時雨量資料</h1> 
+  <div class="rain"></div>
+</body> 
+</html>
